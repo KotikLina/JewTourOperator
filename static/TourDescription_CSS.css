@@ -3,12 +3,6 @@
     padding: 0;
 }
 
-html{
-    background: url('images/asstana.jpg') no-repeat, lightskyblue;
-    height: 100%;
-    background-size: cover;
-}
-
 .header {
     background: rgba(0, 255, 255, 85%);
     display: flex;

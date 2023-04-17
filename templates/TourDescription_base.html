@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="../static/asstana_css.css">
-    <title>aviasales - Asstana</title>
+    <link rel="stylesheet" href="../static/TourDescription_CSS.css">
+    {% block html_css %}
+    {% endblock %}
+    <title>{{ title }}</title>
 </head>
 
 <body>
@@ -29,9 +30,8 @@
 
 <div id="div">
     <div id="div_tour">
-        <h1 class="texts">Прекрасный город Assтана. хз чем славится и хз зачем туда ехать, но я нашел красивую картинку,
-            которая ВОЗМОЖНО снята в том городе. За тур нужно будет заплатить очень много денег и отдать почку.
-            Если вам нравятся такие условия, то сходите к врачу.</h1>
+        {% block tour_description %}
+        {% endblock %}
         <h1 class="texts">
             Продаю вазу, писать в Ватсап:
         </h1>

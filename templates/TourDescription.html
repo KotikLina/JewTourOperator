@@ -1,0 +1,83 @@
+{% extends 'tourDescription_base.html' %}
+
+{% block html_css %}
+    {% if name_tour == 'Asstana' %}
+    <style>
+        html{
+            background: url('/static/images/Asstana.jpg') no-repeat, lightskyblue;
+            height: 100%;
+            background-size: cover;}
+    </style>
+    {% elif name_tour == 'Shymkent' %}
+    <style>
+        html{
+            background: url('/static/images/Shymkent.jpg') no-repeat, lightskyblue;
+            height: 100%;
+            background-size: cover;}
+    </style>
+    {% elif name_tour == 'Kamenogorsk' %}
+    <style>
+        html{
+            background: url('/static/images/Ust-Kamenogorsk.jpg') no-repeat, lightskyblue;
+            height: 100%;
+            background-size: cover;}
+    </style>
+    {% elif name_tour == 'AlmaAty' %}
+    <style>
+        html{
+            background: url('/static/images/Alma-Aty.jpg') no-repeat, lightskyblue;
+            height: 100%;
+            background-size: cover;}
+    </style>
+    {% elif name_tour == 'Aktay' %}
+    <style>
+        html{
+            background: url('/static/images/Aktay.jpg') no-repeat, lightskyblue;
+            height: 100%;
+            background-size: cover;}
+    </style>
+    {% else %}
+    <style>
+        html{
+            background: url('/static/images/Ваза.jpg') no-repeat, lightskyblue;
+            height: 100%;
+            background-size: cover;}
+    </style>
+    {% endif %}
+{% endblock %}
+
+{% block tour_description %}
+    {% if name_tour == 'Asstana' %}
+        <h1 class="texts">
+            Астана является столицей Казахстана и одним из самых интересных городов для туристов.
+            В городе много зданий в futurism-стиле, например, будущий музей Абу-Даби Лувра.
+            В Астане также много парков, таких как Парк первого Президента, а также красивых площадей.
+            Кроме того, кухня Казахстана настолько разнообразна и вкусна, что
+            оставляет неизгладимые впечатления у посетителей.</h1>
+    {% elif name_tour == 'Shymkent' %}
+        <h1 class="texts">
+            Шымкент - крупный город на юге Казахстана, который богат историей, культурой и
+            интересными местами для посещения. Среди достопримечательностей можно выделить Мавзолей Ходжи Ахмеда Ясави,
+            площадь Абая, исторический музей Шымкента и театр оперы и балета им. С. Сейфуллина.
+            В городе также много мест, где можно погулять и попробовать местные блюда.</h1>
+    {% elif name_tour == 'Kamenogorsk' %}
+        <h1 class="texts">
+            Прекрасный город Kamenogorsk. хз чем славится и хз зачем туда ехать, но я нашел красивую картинку,
+            которая ВОЗМОЖНО снята в том городе. За тур нужно будет заплатить очень много денег и отдать почку.
+            Если вам нравятся такие условия, то сходите к врачу.</h1>
+    {% elif name_tour == 'AlmaAty' %}
+        <h1 class="texts">
+            Прекрасный город AlmaAty. хз чем славится и хз зачем туда ехать, но я нашел красивую картинку,
+            которая ВОЗМОЖНО снята в том городе. За тур нужно будет заплатить очень много денег и отдать почку.
+            Если вам нравятся такие условия, то сходите к врачу.</h1>
+    {% elif name_tour == 'Aktay' %}
+        <h1 class="texts">
+            Актау - это очень красивый город на побережье Каспийского моря, расположенный на западе Казахстана.
+            В городе много мест для туристов, таких как Жайык-булава, Нурлытау, Пристань, пещеры Бокты и Таукара,
+            а также Коктыльда - национальный парк, где можно понаблюдать за дикой природой и дикими животными.
+            </h1>
+    {% else %}
+        <h1 class="texts">Блять, беда</h1>
+    {% endif %}
+{% endblock %}
+

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/home_css.css">
-    <title>aviasales - Главная</title>
+    <link rel="stylesheet" href="../static/ListOfTours_Css.css">
+    <title>{% block title %}{% endblock %}</title>
 </head>
+
 <body>
 <header class="header" role="banner">
     <div class="header_div">
@@ -24,11 +26,10 @@
 
 <div id="war"></div>
 
-<div id="div1">
-    <div id="div_text">
-        <p id="text">У нас ахуенные туры</p>
-        <a href="/listOfTours" class="buttons">Список туров</a>
-    </div>
+<div id="div">
+{% block div_tour %}
+{% endblock %}
 </div>
+
 </body>
 </html>

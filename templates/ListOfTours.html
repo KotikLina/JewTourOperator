@@ -1,0 +1,18 @@
+{% extends 'ListOfTours_base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block div_tour %}
+    {% for tour in random_tours %}
+        <div class="div_tour">
+            <img src="{{ tour['image'] }}" alt="Красивые виды Города" class="img">
+            <div class="texts">
+                <h1>{{ tour['title'] }}</h1>
+                <p>{{ tour['description'] }}</p>
+            </div>
+            <a href="{{ tour['url'] }}" class="buttons">Отдать деньги</a>
+        </div>
+    {% endfor %}
+{% endblock %}
