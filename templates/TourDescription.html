@@ -1,51 +1,5 @@
 {% extends 'tourDescription_base.html' %}
 
-{% block html_css %}
-    {% if name_tour == 'Asstana' %}
-    <style>
-        html{
-            background: url('/static/images/Asstana.jpg') no-repeat, lightskyblue;
-            height: 100%;
-            background-size: cover;}
-    </style>
-    {% elif name_tour == 'Shymkent' %}
-    <style>
-        html{
-            background: url('/static/images/Shymkent.jpg') no-repeat, lightskyblue;
-            height: 100%;
-            background-size: cover;}
-    </style>
-    {% elif name_tour == 'Kamenogorsk' %}
-    <style>
-        html{
-            background: url('/static/images/Ust-Kamenogorsk.jpg') no-repeat, lightskyblue;
-            height: 100%;
-            background-size: cover;}
-    </style>
-    {% elif name_tour == 'AlmaAty' %}
-    <style>
-        html{
-            background: url('/static/images/Alma-Aty.jpg') no-repeat, lightskyblue;
-            height: 100%;
-            background-size: cover;}
-    </style>
-    {% elif name_tour == 'Aktay' %}
-    <style>
-        html{
-            background: url('/static/images/Aktay.jpg') no-repeat, lightskyblue;
-            height: 100%;
-            background-size: cover;}
-    </style>
-    {% else %}
-    <style>
-        html{
-            background: url('/static/images/Ваза.jpg') no-repeat, lightskyblue;
-            height: 100%;
-            background-size: cover;}
-    </style>
-    {% endif %}
-{% endblock %}
-
 {% block tour_description %}
     {% if name_tour == 'Asstana' %}
         <h1 class="texts">
@@ -75,6 +29,13 @@
             Актау - это очень красивый город на побережье Каспийского моря, расположенный на западе Казахстана.
             В городе много мест для туристов, таких как Жайык-булава, Нурлытау, Пристань, пещеры Бокты и Таукара,
             а также Коктыльда - национальный парк, где можно понаблюдать за дикой природой и дикими животными.
+            </h1>
+    {% elif name_tour == 'Ust-Kamenogorsk' %}
+        <h1 class="texts">
+            Усть-Каменогорск - невероятно красивый город на востоке Казахстана.
+            Здесь много интересных мест, которые можно посетить, например, набережная Иртыша, Горный парк "Белуха" и
+            многое другое. Туристы могут не только насладиться живописными пейзажами,
+            но и погрузиться в национальную культуру Казахстана, посетив музыкальные фестивали и национальные праздники.
             </h1>
     {% else %}
         <h1 class="texts">Блять, беда</h1>

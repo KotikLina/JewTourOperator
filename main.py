@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route('/home')
 @app.route('/')
 def index():
-    return render_template("JewTourOperator.html", title="aviasales - Главная")
+    css = "../static/JewTourOperator.css"
+    return render_template("JewTourOperator.html", title="aviasales - Главная", css=css)
 
 
 @app.route('/listOfTours')
@@ -36,13 +37,15 @@ def list_of_tours():
          'url': '/tourDescription?tour=Aktay'},
     ]
     random_tours = random.sample(list_tours, 3)
-    return render_template("ListOfTours.html", random_tours=random_tours, title="aviasales - Список туров")
+    css = "../static/ListOfTours.css"
+    return render_template("ListOfTours.html", title="aviasales - Список туров", css=css, random_tours=random_tours)
 
 
 @app.route('/tourDescription')
 def tour_description():
     name_tour = request.args.get('tour')
-    return render_template('TourDescription.html', name_tour=name_tour, title="aviasales - Описание тура")
+    css = "../static/TourDescription.css"
+    return render_template('TourDescription.html', title="aviasales - Описание тура", css=css, name_tour=name_tour)
 
 
 if __name__ == '__main__':

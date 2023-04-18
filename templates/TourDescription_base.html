@@ -3,9 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/TourDescription_CSS.css">
-    {% block html_css %}
-    {% endblock %}
+    <link rel="stylesheet" href='{{ css }}'>
+    <style>
+        html{
+        background: url('/static/images/{{ name_tour }}.jpg'), no-repeat, lightskyblue;
+        height: 100%;
+        background-size: cover;
+    }
+    </style>
     <title>{{ title }}</title>
 </head>
 
