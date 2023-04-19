@@ -1,18 +1,43 @@
-{% extends 'ListOfTours_base.html' %}
+<!DOCTYPE html>
+<html lang="ru">
 
-{% block title %}
-    {{ title }}
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ css }}">
+    <title>{{ title }}</title>
+</head>
 
-{% block div_tour %}
+<body>
+<header class="header" role="banner">
+    <div class="header_div">
+        <a href="/" class="buttons" id="logo">JewTourOperator</a>
+    </div>
+
+    <div class="header_div">
+        <a href="/" class="buttons" id="home">Главная</a>
+        <a href="/listOfTours" class="buttons" id="listOfTours">Список туров</a>
+        <a href="/" class="buttons" id="about_as">О нас</a>
+    </div>
+
+    <div class="header_div">
+        <a href="https://t.me/chatsgpts_bot" class="buttons" id="telegram">Телеграмм: @Chat_GPT</a>
+    </div>
+</header>
+
+<div id="war"></div>
+
+<div id="div">
     {% for tour in random_tours %}
-        <div class="div_tour">
-            <img src="{{ tour['image'] }}" alt="Красивые виды Города" class="img">
-            <div class="texts">
-                <h1>{{ tour['title'] }}</h1>
-                <p>{{ tour['description'] }}</p>
-            </div>
-            <a href="{{ tour['url'] }}" class="buttons">Отдать деньги</a>
+    <div class="div_tour">
+        <img src="{{ tour['image'] }}" alt="Красивые виды Города" class="img">
+        <div class="texts">
+            <h1>{{ tour['title'] }}</h1>
+            <p>{{ tour['description'] }}</p>
         </div>
+        <a href="{{ tour['url'] }}" class="buttons">Отдать деньги</a>
+    </div>
     {% endfor %}
-{% endblock %}
+</div>
+
+</body>
+</html>
